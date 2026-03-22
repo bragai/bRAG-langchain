@@ -68,6 +68,43 @@ This final notebook brings together the RAG system components, with a focus on s
 - **CRAG and Self-RAG Retrieval:** Explores advanced retrieval approaches like CRAG and Self-RAG, with links to examples.
 - **Exploration of Long-Context Impact:** Links to resources explaining the impact of long-context retrieval on RAG models.
 
+### [6]\_rag_with_minimax.ipynb
+
+This bonus notebook demonstrates how to use [MiniMax](https://platform.minimaxi.com/) as an alternative LLM and embedding provider:
+- **Provider Factory:** Switch between OpenAI and MiniMax via `utils/llm_provider.py` — no code changes required.
+- **MiniMax Embeddings:** Native `embo-01` embedding wrapper (`utils/minimax_embeddings.py`) with 1536-dimension vectors.
+- **Full RAG Pipeline:** Complete example using MiniMax M2.7 (up to 1M context) + ChromaDB for local vector storage.
+
+## Multi-Provider LLM Support
+
+This project supports multiple LLM providers via the `utils/llm_provider.py` factory module. You can switch between **OpenAI** (default) and **[MiniMax](https://platform.minimaxi.com/)** by setting environment variables — no code changes required.
+
+| Provider | Chat Models | Embedding Models | Context Window |
+|----------|------------|-----------------|----------------|
+| OpenAI   | `gpt-3.5-turbo`, `gpt-4o`, etc. | `text-embedding-3-large` | Varies |
+| MiniMax  | `MiniMax-M2.7`, `MiniMax-M2.5-highspeed` | `embo-01` (1536 dims) | Up to 1M tokens |
+
+### Quick start with a different provider
+
+```python
+from utils.llm_provider import get_chat_model, get_embeddings
+
+# Uses LLM_PROVIDER / EMBEDDING_PROVIDER env vars (default: openai)
+llm = get_chat_model()
+embeddings = get_embeddings()
+
+# Or specify explicitly
+llm = get_chat_model(provider="minimax", model="MiniMax-M2.7")
+```
+
+Set the provider via `.env`:
+```env
+LLM_PROVIDER=minimax
+MINIMAX_API_KEY=your-api-key
+```
+
+See `notebooks/[6]_rag_with_minimax.ipynb` for a complete walkthrough.
+
 ## Getting Started
 
 ### Pre-requisites
