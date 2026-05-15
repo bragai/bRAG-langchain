@@ -192,7 +192,14 @@ Begin with `[1]_rag_setup_overview.ipynb` to get familiar with the setup process
    PINECONE_API_HOST="your-host-url"
    PINECONE_API_KEY="your-api-key"
 
-   # Cohere - Get key at https://dashboard.cohere.com/api-keys
+   # Astraflow (UCloud) - OpenAI-compatible, 200+ models
+   # Global endpoint - Get key at https://astraflow.ucloud-global.com
+   ASTRAFLOW_API_KEY="your-api-key"
+
+   # Astraflow (UCloud) - China endpoint - Get key at https://astraflow.ucloud.cn
+   ASTRAFLOW_CN_API_KEY="your-api-key"
+
+      # Cohere - Get key at https://dashboard.cohere.com/api-keys
    COHERE_API_KEY=your-api-key
    ```
 
