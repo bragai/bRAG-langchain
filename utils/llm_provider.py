@@ -32,7 +32,7 @@ PROVIDER_DEFAULTS = {
     "minimax": {
         "base_url": "https://api.minimax.io/v1",
         "api_key_env": "MINIMAX_API_KEY",
-        "chat_model": "MiniMax-M2.7",
+        "chat_model": "MiniMax-M3",
         "embedding_model": "embo-01",
     },
 }

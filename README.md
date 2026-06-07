@@ -73,7 +73,7 @@ This final notebook brings together the RAG system components, with a focus on s
 This bonus notebook demonstrates how to use [MiniMax](https://platform.minimaxi.com/) as an alternative LLM and embedding provider:
 - **Provider Factory:** Switch between OpenAI and MiniMax via `utils/llm_provider.py` — no code changes required.
 - **MiniMax Embeddings:** Native `embo-01` embedding wrapper (`utils/minimax_embeddings.py`) with 1536-dimension vectors.
-- **Full RAG Pipeline:** Complete example using MiniMax M2.7 (up to 1M context) + ChromaDB for local vector storage.
+- **Full RAG Pipeline:** Complete example using MiniMax M3 (512K context) + ChromaDB for local vector storage.
 
 ## Multi-Provider LLM Support
 
@@ -82,7 +82,7 @@ This project supports multiple LLM providers via the `utils/llm_provider.py` fac
 | Provider | Chat Models | Embedding Models | Context Window |
 |----------|------------|-----------------|----------------|
 | OpenAI   | `gpt-3.5-turbo`, `gpt-4o`, etc. | `text-embedding-3-large` | Varies |
-| MiniMax  | `MiniMax-M2.7`, `MiniMax-M2.5-highspeed` | `embo-01` (1536 dims) | Up to 1M tokens |
+| MiniMax  | `MiniMax-M3` (default), `MiniMax-M2.7`, `MiniMax-M2.7-highspeed` | `embo-01` (1536 dims) | 512K tokens (M3) |
 
 ### Quick start with a different provider
 
@@ -94,7 +94,7 @@ llm = get_chat_model()
 embeddings = get_embeddings()
 
 # Or specify explicitly
-llm = get_chat_model(provider="minimax", model="MiniMax-M2.7")
+llm = get_chat_model(provider="minimax", model="MiniMax-M3")
 ```
 
 Set the provider via `.env`:

@@ -94,7 +94,7 @@ class TestProviderDefaults:
         assert PROVIDER_DEFAULTS["minimax"]["base_url"] == "https://api.minimax.io/v1"
 
     def test_minimax_default_model(self):
-        assert PROVIDER_DEFAULTS["minimax"]["chat_model"] == "MiniMax-M2.7"
+        assert PROVIDER_DEFAULTS["minimax"]["chat_model"] == "MiniMax-M3"
 
     def test_minimax_api_key_env(self):
         assert PROVIDER_DEFAULTS["minimax"]["api_key_env"] == "MINIMAX_API_KEY"
@@ -135,7 +135,7 @@ class TestGetChatModel:
             get_chat_model(provider="minimax")
             mock_chat.assert_called_once()
             call_kwargs = mock_chat.call_args[1]
-            assert call_kwargs["model"] == "MiniMax-M2.7"
+            assert call_kwargs["model"] == "MiniMax-M3"
             assert call_kwargs["base_url"] == "https://api.minimax.io/v1"
 
     @patch("utils.llm_provider.ChatOpenAI")
@@ -162,7 +162,7 @@ class TestGetChatModel:
         with patch.dict(os.environ, {"LLM_PROVIDER": "minimax", "MINIMAX_API_KEY": "mm-test"}):
             get_chat_model()
             call_kwargs = mock_chat.call_args[1]
-            assert call_kwargs["model"] == "MiniMax-M2.7"
+            assert call_kwargs["model"] == "MiniMax-M3"
 
     @patch("utils.llm_provider.ChatOpenAI")
     def test_extra_kwargs_forwarded(self, mock_chat):
