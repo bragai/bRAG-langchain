@@ -212,11 +212,11 @@ After setting up the environment and running the notebooks in sequence, you can:
 
 ## Star History
 
-<a href="https://star-history.com/#bragai/brag-langchain&Date">
+<a href="https://www.star-history.com/?type=date&repos=bragai%2Fbrag-langchain">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=bragai/brag-langchain&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=bragai/brag-langchain&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=bragai/brag-langchain&type=Date" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=bragai/brag-langchain&type=date&theme=dark&legend=top-left&sealed_token=Qe6d8SOeE0RWvnru_-Xma2aRcyLreotC7ALvS2gxbzJcaNVR7NCl-vBARdgSOCBxJSHocgIPhQuBdazJ_SsHN3NaRP6DS4sQSu3CT5aK1qcRI5gxXl49E52DW3t6OJWd7IOdl8Ks4pdzS4lvLM56AdwHypQeKGZlDDVlnFFfcWFZQUYIVjS7mLoYXZ9N" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=bragai/brag-langchain&type=date&legend=top-left&sealed_token=Qe6d8SOeE0RWvnru_-Xma2aRcyLreotC7ALvS2gxbzJcaNVR7NCl-vBARdgSOCBxJSHocgIPhQuBdazJ_SsHN3NaRP6DS4sQSu3CT5aK1qcRI5gxXl49E52DW3t6OJWd7IOdl8Ks4pdzS4lvLM56AdwHypQeKGZlDDVlnFFfcWFZQUYIVjS7mLoYXZ9N" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=bragai/brag-langchain&type=date&legend=top-left&sealed_token=Qe6d8SOeE0RWvnru_-Xma2aRcyLreotC7ALvS2gxbzJcaNVR7NCl-vBARdgSOCBxJSHocgIPhQuBdazJ_SsHN3NaRP6DS4sQSu3CT5aK1qcRI5gxXl49E52DW3t6OJWd7IOdl8Ks4pdzS4lvLM56AdwHypQeKGZlDDVlnFFfcWFZQUYIVjS7mLoYXZ9N" />
  </picture>
 </a>
 
