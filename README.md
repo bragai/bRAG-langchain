@@ -202,6 +202,9 @@ You're now ready to use the project!
 
 ## Usage
 
+For current web context, try the standalone [Parallel Search MCP retrieval example](examples/parallel_web_retrieval/).
+It returns source-labelled LangChain documents and prints a RAG prompt without requiring an API key or vector database.
+
 After setting up the environment and running the notebooks in sequence, you can:
 
 1.  **Experiment with Retrieval-Augmented Generation**:
