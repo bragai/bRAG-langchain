@@ -38,6 +38,9 @@ class RetrievalTests(unittest.IsolatedAsyncioTestCase):
                 "capabilities": {"tools": {}},
                 "serverInfo": {"name": "offline-fixture", "version": "1"},
             }
+        elif message["method"] == "tools/list":
+            # No output schema here so malformed payloads reach our conversion checks.
+            result = {"tools": [{"name": "web_search", "inputSchema": {"type": "object"}}]}
         elif message["method"] == "tools/call":
             if self.wait_for_call:
                 self.wait_for_call.set()
@@ -76,12 +79,12 @@ class RetrievalTests(unittest.IsolatedAsyncioTestCase):
         self.assertIn(docs[0].page_content, messages[1].content)
         self.assertIn("Question: How does RAG work?", messages[1].content)
         methods = [json.loads(r.content)["method"] for r in self.requests]
-        self.assertEqual(methods, ["initialize", "notifications/initialized", "tools/call"])
+        self.assertEqual(methods, ["initialize", "notifications/initialized", "tools/call", "tools/list"])
         for request in self.requests:
             self.assertEqual(str(request.url), "https://search.parallel.ai/mcp")
             self.assertEqual(request.headers["user-agent"], example.USER_AGENT)
             self.assertNotIn("authorization", request.headers)
-        call = json.loads(self.requests[-1].content)["params"]
+        call = json.loads(self.requests[2].content)["params"]
         self.assertEqual(call["name"], "web_search")
         self.assertEqual(call["arguments"]["objective"], "How does RAG work?")
         self.assertEqual(call["arguments"]["search_queries"], ["LangChain RAG documentation"])
