@@ -4,6 +4,8 @@
 
 ---------------------
 
+<a href="https://trendshift.io/repositories/17125?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-17125" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/17125/daily?language=Jupyter%20Notebook" alt="bragai%2FbRAG-langchain | Trendshift" width="250" height="55"/></a>
+
 This repository contains a comprehensive exploration of Retrieval-Augmented Generation (RAG) for various applications.
 Each notebook provides a detailed, hands-on guide to setting up and experimenting with RAG from an introductory level to advanced implementations, including multi-querying and custom RAG builds.
 
